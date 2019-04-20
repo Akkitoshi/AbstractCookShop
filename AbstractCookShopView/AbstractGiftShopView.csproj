@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{51285BDD-E463-42DD-AE87-81FAB52DB5EE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AbstractCookShopView</RootNamespace>
+    <AssemblyName>AbstractCookShopView</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Unity.Abstractions, Version=4.1.3.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.10.3\lib\net46\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container, Version=5.10.3.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.10.3\lib\net46\Unity.Container.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClient.Designer.cs">
+      <DependentUpon>FormClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormClientOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClientOrders.Designer.cs">
+      <DependentUpon>FormClientOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClients.Designer.cs">
+      <DependentUpon>FormClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCreateOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateOrder.Designer.cs">
+      <DependentUpon>FormCreateOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCook.Designer.cs">
+      <DependentUpon>FormCook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCookIngridients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCookIngridients.Designer.cs">
+      <DependentUpon>FormCookIngridients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCooks.Designer.cs">
+      <DependentUpon>FormCooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIngridient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIngridient.designer.cs">
+      <DependentUpon>FormIngridient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIngridients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIngridients.Designer.cs">
+      <DependentUpon>FormIngridients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPutOnStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPutOnStock.Designer.cs">
+      <DependentUpon>FormPutOnStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStock.Designer.cs">
+      <DependentUpon>FormStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStocksLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStocksLoad.Designer.cs">
+      <DependentUpon>FormStocksLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FormStocks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStocks.Designer.cs">
+      <DependentUpon>FormStocks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="FormClient.resx">
+      <DependentUpon>FormClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormClientOrders.resx">
+      <DependentUpon>FormClientOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormClients.resx">
+      <DependentUpon>FormClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateOrder.resx">
+      <DependentUpon>FormCreateOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCook.resx">
+      <DependentUpon>FormCook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCookIngridients.resx">
+      <DependentUpon>FormCookIngridients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCooks.resx">
+      <DependentUpon>FormCooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIngridient.resx">
+      <DependentUpon>FormIngridient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIngridients.resx">
+      <DependentUpon>FormIngridients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPutOnStock.resx">
+      <DependentUpon>FormPutOnStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStock.resx">
+      <DependentUpon>FormStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStocks.resx">
+      <DependentUpon>FormStocks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStocksLoad.resx">
+      <DependentUpon>FormStocksLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="reportViewer.rdlc" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\AbstractCookShopServiceDAL.BindingModel.IngridientsBindingModel.datasource" />
+    <None Include="Properties\DataSources\AbstractCookShopServiceDAL.BindingModels.CookBindingModel.datasource" />
+    <None Include="Properties\DataSources\AbstractCookShopServiceDAL.BindingModels.CookIngridientsBindingModel.datasource" />
+    <None Include="Properties\DataSources\AbstractCookShopServiceDAL.BindingModels.IngridientsBindingModel.datasource" />
+    <None Include="Properties\DataSources\AbstractCookShopServiceDAL.BindingModels.SClientBindingModel.datasource" />
+    <None Include="Properties\DataSources\AbstractCookShopServiceDAL.BindingModels.SStockBindingModel.datasource" />
+    <None Include="Properties\DataSources\AbstractCookShopServiceDAL.BindingModels.StockIngridientsBindingModel.datasource" />
+    <None Include="Properties\DataSources\AbstractCookShopServiceDAL.ViewModel.SClientOrdersModel.datasource" />
+    <None Include="Properties\DataSources\AbstractCookShopView.FormClients.datasource" />
+    <None Include="Properties\DataSources\AbstractCookShopView.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\AbstractCookShopView.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\AbstractShopView.FormClient.datasource" />
+    <None Include="Properties\DataSources\AbstractShopView.Program.datasource" />
+    <None Include="Properties\DataSources\FormCreateOrder.datasource" />
+    <None Include="Properties\DataSources\FormCook.datasource" />
+    <None Include="Properties\DataSources\FormCookIngridients.datasource" />
+    <None Include="Properties\DataSources\FormCooks.datasource" />
+    <None Include="Properties\DataSources\FormMain.datasource" />
+    <None Include="Properties\DataSources\FormMaterial.datasource" />
+    <None Include="Properties\DataSources\FormIngridients.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AbstractCookShopModel\AbstractCookShopModel.csproj">
+      <Project>{8f783248-6123-48aa-aaa3-027c7e89cb89}</Project>
+      <Name>AbstractCookShopModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AbstractCookShopServiceDAL\AbstractCookShopServiceDAL.csproj">
+      <Project>{4c4bc1d9-62d7-46a8-a3a8-6477395c4059}</Project>
+      <Name>AbstractCookShopServiceDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AbstractCookShopServiceImplementList\AbstractCookShopServiceImplementList.csproj">
+      <Project>{aff88f55-c383-45d7-8b49-4d734ba415f3}</Project>
+      <Name>AbstractCookShopServiceImplementList</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AbstractShopServiceImplementDataBase\AbstractCookShopServiceImplementDataBase.csproj">
+      <Project>{7d832076-b0e3-43fb-bcf5-7479aeb82e74}</Project>
+      <Name>AbstractCookShopServiceImplementDataBase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

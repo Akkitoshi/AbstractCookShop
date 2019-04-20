@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C4BC1D9-62D7-46A8-A3A8-6477395C4059}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AbstractCookShopServiceDAL</RootNamespace>
+    <AssemblyName>AbstractCookShopServiceDAL</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BindingModels\IngridientsBindingModel.cs" />
+    <Compile Include="BindingModels\ReportBindingModel.cs" />
+    <Compile Include="BindingModels\SClientBindingModel.cs" />
+    <Compile Include="BindingModels\CookBindingModel.cs" />
+    <Compile Include="BindingModels\CookIngridientsBindingModel.cs" />
+    <Compile Include="BindingModels\SClientOrdersModel.cs" />
+    <Compile Include="BindingModels\SOrderBindingModel.cs" />
+    <Compile Include="BindingModels\SStockBindingModel.cs" />
+    <Compile Include="BindingModels\StockIngridientsBindingModel.cs" />
+    <Compile Include="Interfaces\IReportService.cs" />
+    <Compile Include="Interfaces\ISClientService.cs" />
+    <Compile Include="Interfaces\IMainService.cs" />
+    <Compile Include="Interfaces\ICookService.cs" />
+    <Compile Include="Interfaces\IIngridientsService.cs" />
+    <Compile Include="Interfaces\ISStockService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\SClientViewModel.cs" />
+    <Compile Include="ViewModel\CookIngridientsViewModel.cs" />
+    <Compile Include="ViewModel\CookViewModel.cs" />
+    <Compile Include="ViewModel\IngridientsViewModel.cs" />
+    <Compile Include="ViewModel\SOrderViewModel.cs" />
+    <Compile Include="ViewModel\SStockViewModel.cs" />
+    <Compile Include="ViewModel\StockIngridientsViewModel.cs" />
+    <Compile Include="ViewModel\StocksLoadViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AbstractCookShopModel\AbstractCookShopModel.csproj">
+      <Project>{8f783248-6123-48aa-aaa3-027c7e89cb89}</Project>
+      <Name>AbstractCookShopModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
